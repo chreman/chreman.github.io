@@ -4,7 +4,7 @@
 body {
     font-family: "Roboto Condensed", Arial, sans-serif;
     background-color: #fff;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.5em;
     color: #666;
     font-weight: 300;
@@ -23,7 +23,7 @@ hr {
 span.time, span.categories {
     color: #ADADAD;
     margin-bottom: 5px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 h1 {
@@ -53,6 +53,7 @@ a, a:link, a:active {
 a.about {
     font-size: 16px;
 }
+
 a:hover {
     color: #B3B3B3;
     text-decoration: underline;
@@ -146,7 +147,7 @@ div.col-sm-3 {
 }
 
 div.col-sm-3 strong {
-        font-size: 16px;
+        font-size: 18px;
         color: #4A4A4A;
         font-weight: normal;
 }

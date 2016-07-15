@@ -1,4 +1,4 @@
-title: What is happening
+title: Christopher Kittel
 description: Blogging about Open Data Science
 author: Christopher Kittel
 github: https://github.com/chreman
@@ -12,7 +12,7 @@ tagarray: []
 collections:
   project:
     output: true
-permalink: /projects/:path/
+    permalink: /projects/:path/
 
 social:
     - icon: fa-twitter
