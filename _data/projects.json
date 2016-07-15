@@ -1,0 +1,26 @@
+[
+	{
+		"slug": "openscience",
+		"name": "Open Science",
+		"image": "placeholder.jpg",
+		"url": "",
+		"date": "2011 - present",
+		"tags": ["Open Science","Training", "Reproducibility"]
+	},
+	{
+		"slug": "contentmine",
+		"name": "ContentMine",
+		"image": "placeholder.jpg",
+		"url": "http://contentmine.co/",
+		"date": "Apr 2015 - present",
+		"tags": ["Text Mining","Training"]
+	},
+	{
+		"slug": "datascience",
+		"name": "Data Science",
+		"image": "placeholder.jpg",
+		"url": "datascience",
+		"date": "2015 - present",
+		"tags": ["Data Science","Apache Spark"]
+	}
+]
