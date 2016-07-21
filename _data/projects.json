@@ -2,7 +2,7 @@
 	{
 		"slug": "openscience",
 		"name": "Open Science",
-		"image": "placeholder.jpg",
+		"image": "openscience.jpg",
 		"url": "",
 		"date": "2011 - present",
 		"tags": ["Open Science","Training", "Reproducibility"]
@@ -10,7 +10,7 @@
 	{
 		"slug": "contentmine",
 		"name": "ContentMine",
-		"image": "placeholder.jpg",
+		"image": "contentmine.jpg",
 		"url": "http://contentmine.co/",
 		"date": "Apr 2015 - present",
 		"tags": ["Text Mining","Training"]
@@ -18,9 +18,17 @@
 	{
 		"slug": "datascience",
 		"name": "Data Science",
-		"image": "placeholder.jpg",
+		"image": "datascience.jpg",
 		"url": "datascience",
 		"date": "2015 - present",
 		"tags": ["Data Science","Apache Spark"]
+	},
+	{
+		"slug": "dlina",
+		"name": "dlina",
+		"image": "dlina.jpg",
+		"url": "http://dlina.github.io/",
+		"date": "2015 - present",
+		"tags": ["Network Analysis","Digital Humanities"]
 	}
 ]

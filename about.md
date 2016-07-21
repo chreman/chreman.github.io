@@ -8,7 +8,7 @@ imagefeature: logo.jpg
 chart: false
 ---
 
-## About me
+### About me
 
 * Studying Environmental System Sciences (M.Sc) in Graz, Austria
 * Working for [ContentMine](http://contentmine.co/) as Training Manager
