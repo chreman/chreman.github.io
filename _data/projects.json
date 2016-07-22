@@ -1,10 +1,10 @@
 [
 	{
 		"slug": "openscience",
-		"name": "Open Science",
-		"image": "openscience.jpg",
-		"url": "",
-		"date": "2011 - present",
+		"name": "Open Science ASAP",
+		"image": "openscienceasap.png",
+		"url": "openscienceasap",
+		"date": "2012 - present",
 		"tags": ["Open Science","Training", "Reproducibility"]
 	},
 	{

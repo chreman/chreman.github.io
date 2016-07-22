@@ -13,9 +13,10 @@
 h3.project-headlines {
     margin: 5px 0;
     font-size: 20px;
+    text-align: center;
 }
 span.tags {
-    font-size: 10px;
+    font-size: 13px;
     border-bottom: 1px #888 dotted;
     margin: 0 5px;
 }
@@ -44,8 +45,8 @@ span.tags:last-child{ margin-right: 0; }
     display: block;
 }
 .project-img {
-    width: 230px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     display: block;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,7 +59,7 @@ span.tags:last-child{ margin-right: 0; }
 span.tag-cloud {
     margin: 0 2px;
     cursor: pointer;
-    font-size: 75%;
+    font-size: 90%;
     padding: .2em .6em .3em;
     font-weight: 700;
     display: inline;
