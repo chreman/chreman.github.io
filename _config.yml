@@ -19,7 +19,7 @@ social:
       link: "https://twitter.com/chris_kittel"
     - icon: fa-linkedin
       link: "#"
-    - icon: orcid
+    - icon: ai-orcid
       link: "http://orcid.org/0000-0002-1894-5040"
     - icon: fa-stack-exchange
       link: "#"
@@ -28,7 +28,7 @@ share:
   twitter_username: chris_kittel
 
 urls:
-    - text: About
+    - text: About Me
       url: /about/
     - text: Projects
       url: /projects/
