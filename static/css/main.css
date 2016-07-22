@@ -6,7 +6,7 @@ body {
     background-color: #fff;
     font-size: 17px;
     line-height: 1.5em;
-    color: #666;
+    color: black;
     font-weight: 300;
 }
 hr {
@@ -30,13 +30,14 @@ h1 {
     font-weight: normal;
     color: #696969;
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 h2 {
     font-weight: normal;
     margin-bottom: 5px;
     color: #666666;
+    font-size: 25px;
 }
 
 h3 {

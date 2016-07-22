@@ -17,10 +17,10 @@ collections:
 social:
     - icon: fa-twitter
       link: "https://twitter.com/chris_kittel"
-    - icon: fa-linkedin
-      link: "#"
-    - icon: fa-stack-exchange
-      link: "#"
+    # - icon: fa-linkedin
+    #   link: "#"
+    # - icon: fa-stack-exchange
+    #   link: "#"
 academic:
     - icon: ai-orcid
       link: "http://orcid.org/0000-0002-1894-5040"
