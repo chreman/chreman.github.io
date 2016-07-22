@@ -1,5 +1,5 @@
 title: Christopher Kittel
-description: Blogging about Open Data Science
+description: Open Data Science
 author: Christopher Kittel
 github: https://github.com/chreman
 about: I push buttons on the internet.
@@ -31,6 +31,8 @@ share:
 urls:
     - text: About Me
       url: /about/
+    - text: Blog
+      url: /
     - text: Projects
       url: /projects/
     - text: XML Feed
