@@ -33,8 +33,6 @@ urls:
       url: /about/
     - text: Projects
       url: /projects/
-    - text: Github
-      url: https://github.com/chreman
     - text: XML Feed
       url: /feed.xml
 
