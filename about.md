@@ -11,9 +11,9 @@ chart: false
 ### About me
 
 * Studying Environmental System Sciences (M.Sc) in Graz, Austria
-* Working for [ContentMine](http://contentmine.co/) as Training Manager
+* Currently Training Manager at [ContentMine](http://contentmine.co/)
+* Research interests: Text Mining, Scholarly Literature Recommendation,
 
-* Research interests: Text Mining, Scholarly Literature Recommendation, Complexity Reduction
+I [contribute](../projects) to a few not-for-profit/non-governmental organizations, whose projects circle around applying text and data mining technologies to help researchers and the public make the best use of the ever increasing number of scholarly publications.
 
-Right now working on a Master Thesis with the goal to specify and create an (open) dataset that may serve as a standard for evaluation of scholarly literature recommender systems.
-I will try to blog about my progress here, and to publish other research outcomes as openly as possible.
+I'm also active in the Open Science movement, and contributing to Open Knowledge and Mozilla Science Lab efforts to help open up research, and increase reproducibility and re-usability of scientific results, methods and processes.
