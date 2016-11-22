@@ -217,9 +217,9 @@ section.success {
     transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption:hover {
+/*#portfolio .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
-}
+}*/
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
