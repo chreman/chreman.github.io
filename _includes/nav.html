@@ -11,7 +11,6 @@
                 </button>
                 <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -19,14 +18,26 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#portfolio">Portfolio</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+                </ul>
+                <ul class="list-inline">
+                    {% for network in site.social %}
+                    <li>
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                    </li>
+                {% endfor %}
+                    {% for network in site.academic %}
+                    <li>
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="ai ai-fw ai-{{ network.title }}"></i></a>
+                    </li>
+                {% endfor %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
