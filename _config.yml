@@ -1,49 +1,65 @@
-title: Christopher Kittel
-description: Open Data Science
+# Site settings
+title: Open Data Science
 author: Christopher Kittel
-github: https://github.com/chreman
-about: I push buttons on the internet.
-#disqus_shortname:
-#google_analytics:
+email: your-email@domain.com
+url: https://christopherkittel.eu
+description: "I specialize in developing taylored Text and Data Analytics Pipelines for Science and Civil Society."
+skills: "Text and Data Analytics Pipelines for Science and Civil Society"
+meta_author: Kittel Christopher
+# If you use disqus you need disqus shortname
+# https://help.disqus.com/customer/portal/articles/466208
+# disqus_shortname: myshortname
+# Google webmaster tools
+# google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+# bing_verify:
 
-enableTags: true
-tagarray: []
+# Contact form:
+# - static : pass through formspree.io to validate email sending
+# - disqus : replace contact form by disqus thread
+# - comment the line below if you want to stick with the default PHP contact form
 
-collections:
-  project:
-    output: true
-    permalink: /projects/:path/
-
+# social:
+#     - icon: fa-twitter
+#       link: "https://twitter.com/chris_kittel"
+#     # - icon: fa-linkedin
+#     #   link: "#"
+#     # - icon: fa-stack-exchange
+#     #   link: "#", flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-    - icon: fa-twitter
-      link: "https://twitter.com/chris_kittel"
-    # - icon: fa-linkedin
-    #   link: "#"
-    # - icon: fa-stack-exchange
-    #   link: "#"
+  - title: twitter
+    url: http://twitter.com/chris_kittel
+  # - title: facebook
+  #   url:
+  # - title: stack-overflow
+  #   url: http://stackoverflow.com/questions/tagged/jekyll
+  # - title: bitbucket
+  #   url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/chreman
 academic:
-    - icon: ai-orcid
-      link: "http://orcid.org/0000-0002-1894-5040"
+    - title: orcid
+      url: http://orcid.org/0000-0002-1894-5040
 
-share:
-  twitter_username: chris_kittel
 
-urls:
-    - text: About Me
-      url: /about/
-    - text: Blog
-      url: /
-    - text: Projects
-      url: /projects/
-    - text: XML Feed
-      url: /feed.xml
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 18bc9c #80B3FF
+  primary-rgb: "24,288,156" #"128,179,255"
+  secondary: 233140 #FD6E8A
+  secondary-dark: 233140 #A2122F
 
-url: "https://chreman.github.io"
-baseurl: ""
-paginate: 5
-per_page: 5
-paginate_path: "/page:num/"
+# Footer settings
+footer:
+  copyright: cc-by Christopher Kittel
+  # location: Location
+  # social: Around the Web
+  # credits: Credits
+
+
+# Credits content
+credits: 'This theme is adapted from Freelancer, a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+
+# Build settings
 markdown: kramdown
-gems:
-  - jekyll-paginate
-  - jekyll-gist
+permalink: pretty
