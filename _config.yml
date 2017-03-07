@@ -2,7 +2,6 @@
 # <!-- modified by christopher kittel -->
 title: Open Data Science
 author: Christopher Kittel
-email: your-email@domain.com
 url: https://christopherkittel.eu
 description: "I specialize in developing Text and Data Analytics Pipelines for Science and Civil Society."
 skills: "Text and Data Analytics Workflows for Science and Civil Society"
@@ -41,6 +40,7 @@ social:
 academic:
     - title: orcid
       url: http://orcid.org/0000-0002-1894-5040
+
 
 
 # Color settings (hex-codes without the leading hash-tag)
