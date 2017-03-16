@@ -28,7 +28,7 @@ meta_author: Kittel Christopher
 #     #   link: "#", flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/chris_kittel
+    url: https://twitter.com/chris_kittel
   # - title: facebook
   #   url:
   # - title: stack-overflow
@@ -36,10 +36,10 @@ social:
   # - title: bitbucket
   #   url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/chreman
+    url: https://github.com/chreman
 academic:
     - title: orcid
-      url: http://orcid.org/0000-0002-1894-5040
+      url: https://orcid.org/0000-0002-1894-5040
 
 
 
