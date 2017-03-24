@@ -41,7 +41,7 @@ academic:
     - title: orcid
       url: https://orcid.org/0000-0002-1894-5040
 
-
+permalink: /:title.html
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
