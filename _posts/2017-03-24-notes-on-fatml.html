@@ -1,0 +1,80 @@
+---
+layout: post
+title: Notes on FATML
+permalink: /:title.html
+---
+
+<input type="text" name="filter_input" onkeyup="update_table()" placeholder="Filter Titles...">
+<input type="text" name="filter_input" onkeyup="update_table()" placeholder="Filter Issues...">
+<input type="text" name="filter_input" onkeyup="update_table()" placeholder="Filter Technologies...">
+<input type="text" name="filter_input" onkeyup="update_table()" placeholder="Filter Use Cases...">
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript"charset="utf-8">
+  // dataset = []
+  // d3.csv("fatmlpapers.csv", function(data) {
+  //   console.log(data);
+  // })
+  // data = d3.csv("fatmlpapers.csv")
+  // var container = d3.select("body")
+  //                     .append("table")
+  d3.text("data/fatmlpapers.csv", function(data) {
+      var parsedCSV = d3.csv.parseRows(data);
+      var headers = parsedCSV.slice(0,1);
+      var content = parsedCSV.slice(1,parsedCSV.length);
+      d3.select("body")
+          .append("div").attr("class", "container")
+          .append("table").attr("id", "papers").attr("class", "table text-left table-striped").attr("style", "font-size:13px;")
+          .append("tbody").attr("id", "tablebody");
+      d3.select("tbody")
+          .selectAll("th")
+            .data(headers).enter()
+            .append("tr")
+            .selectAll("th")
+                .data(function(d) { return d; }).enter()
+                .append("th")
+                .text(function(d) { return d; });
+
+      d3.select("tbody")
+          .selectAll("tr")
+              .data(content).enter()
+              .append("tr")
+
+          .selectAll("td")
+              .data(function(d) { return d; }).enter()
+              .append("td")
+              .filter(function(d) { return !d.startsWith('http'); })
+              .text(function(d) { return d; });
+      d3.select("tbody")
+          .selectAll("td")
+          .filter(function(d) { return d.startsWith('http'); })
+          .append("a").attr("href", function(d){ return d; }).attr('target', '_blank')
+          .text(function(d) { return 'download'; });
+  });
+  // Declare variables
+  //
+  function update_table() {
+    var inputs, filters, table, trs, td, i;
+    inputs = document.getElementsByName("filter_input");
+    filters = [for (input of inputs) input.value.toUpperCase()];
+    table = document.getElementById("papers");
+    trs = table.getElementsByTagName("tr");
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < trs.length; i++) {
+      var td0 = trs[i].getElementsByTagName("td")[0];
+      var td1 = trs[i].getElementsByTagName("td")[1];
+      var td2 = trs[i].getElementsByTagName("td")[2];
+      var td3 = trs[i].getElementsByTagName("td")[3];
+      if (td0 && td1 && td2) {
+        if (td0.innerHTML.toUpperCase().indexOf(filters[0]) > -1 &&
+            td1.innerHTML.toUpperCase().indexOf(filters[1]) > -1 &&
+            td2.innerHTML.toUpperCase().indexOf(filters[2]) > -1 &&
+            td3.innerHTML.toUpperCase().indexOf(filters[3]) > -1) {
+          trs[i].style.display = "";
+        } else {
+          trs[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
