@@ -34,7 +34,6 @@ permalink: /:title.html
                 .data(function(d) { return d; }).enter()
                 .append("th")
                 .text(function(d) { return d; });
-
       d3.select("tbody")
           .selectAll("tr")
               .data(content).enter()
@@ -51,8 +50,7 @@ permalink: /:title.html
           .append("a").attr("href", function(d){ return d; }).attr('target', '_blank')
           .text(function(d) { return 'download'; });
   });
-  // Declare variables
-  //
+
   function update_table() {
     var inputs, filters, table, trs, td, i;
     inputs = document.getElementsByName("filter_input");
@@ -65,7 +63,7 @@ permalink: /:title.html
       var td1 = trs[i].getElementsByTagName("td")[1];
       var td2 = trs[i].getElementsByTagName("td")[2];
       var td3 = trs[i].getElementsByTagName("td")[3];
-      if (td0 && td1 && td2) {
+      if (td0) {
         if (td0.innerHTML.toUpperCase().indexOf(filters[0]) > -1 &&
             td1.innerHTML.toUpperCase().indexOf(filters[1]) > -1 &&
             td2.innerHTML.toUpperCase().indexOf(filters[2]) > -1 &&
