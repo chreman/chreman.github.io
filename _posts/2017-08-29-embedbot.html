@@ -1,0 +1,271 @@
+---
+layout: post
+title: Embedbot
+permalink: /:title.html
+---
+
+<div class="text-justify">
+<h4>Related terms to cat: tgg, ggg, ggc, ttg, gac</h4>
+Apache Spark is often named as the successor framework of Hadoop for large-scale data analytics. It comes neatly packaged with dataframe-structure with SQL-functionalities, a machine learning API and various other useful additions.
+I played around with it for a while, and built a word2vec-Twitter bot with basic interactive functionalities. In this post I want to outline how.
+<br>
+<br>
+We need following ingredients:
+<ul>
+<li>The dataset - a large collection of texts, in our case the Open Access fulltexts from EuropePMC in XML-format</li>
+<li>The word2vec-model - computed on that dataset, in our case with the Word2Vec-implementation in Apache Spark-ML</li>
+<li>The Bot - taking user queries and answering them</li>
+</ul>
+
+We work with following assumptions:
+<ul>
+<li>The dataset is downloaded locally, or stored in S3</li>
+<li>Apache Spark is running locally, or in the cloud - there are many good tutorials how to set up Spark, e.g.
+  <a href="http://alexanderwaldin.github.io/pyspark-quickstart-guide.html" target="_blank">Pyspark locally</a>
+  or <a href="https://www.supergloo.com/fieldnotes/apache-spark-cluster-amazon-ec2-tutorial/" target="_blank">Spark on AWS</a>.</li>
+</ul>
+
+<h4>Step 1: Extract the full text and build a Word2Vec-model</h2>
+
+Spark reads in JSON quite well, XML less so. We will use a small script to extract full text, abstract and metadata from the XML files.
+The <a href="https://github.com/chreman/embedbot/blob/master/workflow/xml2json.py" target="_blank">script</a> untars the files, parses the XML files, identifies individual articles, and extracts data and metadata according to our <a href="https://github.com/chreman/embedbot/blob/master/workflow/JATS.json" target="_blank">specifications</a>.
+Execute it with
+<pre><code class"bash">python3 xml2json.py --input XMLFOLDER --output JSONFOLDER --style JATS --source --CORE --compressed gz</code></pre>
+The style and source definitions are necessary as XML tags may vary slighty with publishers and repositories.
+
+Now we can already run the Word2Vec model-building job on a Spark cluster with this small <a href="https://github.com/chreman/embedbot/blob/master/workflow/workflow.py" target="_blank">workflow script</a>.
+The script sets up some basic logging functionalities so that we can track progress and log errors.
+It then starts up a Spark context, connecting to the cluster.
+
+<pre><code class="python">conf = SparkConf()
+sc = SparkContext(conf=conf)
+spark = SparkSession(sc)
+</code></pre>
+
+By pointing it to the folder where we stored the JSON files, Spark will read the JSONs and transform them into a DataFrame, with one article per row, and data and metadata as columns.
+
+<pre><code class="python">df = spark.read.json(args.input)</code></pre>
+
+For the Word2Vec-model we only need words, so we subset the dataframe to
+
+<pre><code class="python">fulltexts = df.select('doi', 'abstract', 'fulltext')</code></pre>
+
+We now define a pipeline consisting of following stages:
+<ol>
+<li>concatening the strings abstracts and fulltexts into one text</li>
+<li>tokenizing and splitting the texts so that only characters remain</li>
+<li>the actual model builder, already implemented in Spark-ML</li>
+</ol>
+The word2vec-model can be finetuned: vectorSize, maxIter and windowSize are the key parameters.
+Models generally become better in learning abstract relations by increasing either, or both, of windowSize and maxIter at the cost of longer computation and higher memory demand.
+
+
+<pre><code class="python">stringconcat = StringConcatenator(inputCols=["abstract", "fulltext"],
+                                  outputCol="texts")
+tokenizer = RegexTokenizer(inputCol="texts",
+                           outputCol="words", pattern="\\W")
+word2Vec = Word2Vec(vectorSize=500, minCount=20,
+                    maxIter=args.maxIter, numPartitions=args.numPartitions,
+                    windowSize=args.windowSize,
+                    stepSize=args.stepSize,
+                    inputCol="words", outputCol="w2v")
+w2vpipeline = Pipeline(stages=[stringconcat,
+                               tokenizer,
+                               word2Vec])</code></pre>
+
+We then apply the pipeline to the fulltexts-dataframe, and wait. Once the model is finished, we select it as the last stage of the pipeline, extract the word vectors and save them.
+
+<pre><code class="python">w2vpipeline_model = w2vpipeline.fit(fulltexts)
+w2vmodel = w2vpipeline_model.stages[-1]
+vectors = w2vmodel.getVectors()
+vectors.write.save(args.output+"df.parquet")</code></pre>
+
+Run the whole script either as a custom step on AWS, or locally with
+
+<pre><code class="bash">/path_to_spark/bin/spark-submit --master spark://localhostname:7077
+  --num-executors - 1 --executor-memory ASMUCHASYOUHAVE --executor-cores 4
+  /path_to/workflow.py --input JSONFOLDER --output VECTORFOLDER --maxIter 1
+    --windowSize 5 --logpath LOGFOLDER</code></pre>
+
+We will then run a <a href="https://github.com/chreman/embedbot/blob/master/converter/vector_converter.py" target="_blank">second Spark-job</a> that converts the saved word vectors (which are still a dataframe) into two pickled files, one as a pickled list of the actual words, and one numpy matrix of the vectors.
+We do this to make it as simple as possible to read and access, if we want our bot to be easily deployed, acceptably fast and not requiring much CPU or RAM.
+
+<pre><code class="bash">/path_to_spark/bin/spark-submit --master spark://localhostname:7077
+  --num-executors - 1 --executor-memory ASMUCHASYOUHAVE --executor-cores 4
+  /path_to/vector_converter.py --input VECTORFOLDER --output MODELFOLDER --logpath LOGFOLDER</code></pre>
+
+That's it for step 1. We now have a word2vec-model in small, compact form, built on millions of words from Open Access scientific literature.
+
+<h4>Step 2: Building a Twitter-bot that can react to queries/questions</h4>
+
+The bot mainly consists of two components, one for handling the interaction on Twitter, and one that translates the interaction into the word2vec-model and comes up with a hopefully reasonable answer.
+The <a href="https://github.com/chreman/embedbot/blob/master/bot/server.py" target="_blank">actual bot</a> is
+heavily supported with ideas and code from <a href="https://github.com/thricedotted/twitterbot" target="_blank">twitterbot</a>.
+It also relies on the daemonization of processes, which is currently only available on
+<a href="http://web.archive.org/web/20131017130434/http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/" target="_blank">Archive</a>.
+<br>
+It regularly checks for direct mentions (which is how it expects to be queried), tries to translate the query into vectors and some mathematical operations
+ (replies with a message if that's not possible for the query, e.g. if words are not in the vocabulary),
+and if successful, replies to the tweet with an answer. To avoid replying multiple times to one query, it saves the last replied ID in a state file.
+<br>
+In this code snippet I only include some of the functions relevant for the word2vec-query interaction. I omitted those mainly responsible for interacting with the Twitter-API.
+<pre><code class="python">import tweepy
+
+import json
+import logging
+import time
+
+import os
+from os import path
+import re
+import pickle
+import argparse
+
+from http.client import IncompleteRead
+from w2vEngine import w2vEngine
+from daemon import Daemon
+import sys
+
+
+class EmbedBot(Daemon):
+    """docstring for EmbedBot"""
+    def __init__(self, pidfile):
+        super(EmbedBot, self).__init__(pidfile)
+        logname = ("EmbedBot.log")
+        self.log = logging.getLogger("embedbot")
+        self.log.setLevel('INFO')
+        formatter = logging.Formatter('%(asctime)-15s %(name)s '
+                                      '[%(levelname)s] %(message)s')
+        fh = logging.FileHandler(logname)
+        fh.setFormatter(formatter)
+        self.log.addHandler(fh)
+
+    def handle_mentions(self):
+        for mention in self.state['mention_queue']:
+            prefix = self.get_mention_prefix(mention)
+            text = " ".join([w for w in mention.text.split() if '@' not in w])
+            query = (text.lower()
+                         .replace("-", "+-")
+                         .replace(" ", "")
+                         .split("+"))
+            signs = [(-1) if "-" in q
+                     else 1
+                     for q in query]
+            not_in_vocab = self.check_vocabulary(query)
+            if len(not_in_vocab) != 0:
+                self.log.info("Not in vocabulary: "+", ".join(not_in_vocab))
+                reply = prefix+" Sorry, "+", ".join(not_in_vocab)
+                              +" not in my vocabulary."
+                self.post_tweet(reply, reply_to=mention)
+                self.state['mention_queue'].remove(mention)
+                continue
+            reply = self.formulate_reply(prefix, text, query, signs)
+            self.log.info("About to post "+reply)
+            self.post_tweet(reply, reply_to=mention)
+            self.state['mention_queue'].remove(mention)
+
+    def formulate_reply(self, prefix, text, query, signs):
+        if len(query) == 1:
+            result = self.w2vengine.get_synonyms(query[0], 5)
+            result = ", ".join(result)
+            reply = "Related terms to "+query[0]+": "+result
+        else:
+            result = self.w2vengine.get_abstractions(query, signs, 5)
+            result = ", ".join(result)
+            reply = " = ".join([text, result])
+        return " ".join([prefix, reply])
+
+    def check_vocabulary(self, query):
+        query = [q.replace("-", "") for q in query]
+        q = set(query)
+        diff = q.difference(self.w2vengine.vocabulary)
+        return list(diff)
+</code></pre>
+
+
+The word2vec-engine translating and replying to queries has two main functions.
+If only one word is present in the query, it will reply with a list of synonyms close to that word. Close in the sense that they are in a similar region the high-dimensional vector space.
+<br>
+The second function can make simple additions and subtractions to that locations.
+It first retrieves the position (word vector) of each query word and then sums all those positions up.
+This gives us a new point in the vector space, and we now go to this point and look around. The closest words we find (calculated by cosine similarity), we will use in our answer.
+
+<pre><code class="python">import pandas as pd
+import numpy as np
+import logging
+import pickle
+from os import path
+
+from sklearn.metrics.pairwise import cosine_similarity
+
+
+class w2vEngine(object):
+    """docstring for w2vEngine"""
+    def __init__(self, modelpath):
+        super(w2vEngine, self).__init__()
+        logname = ("EmbedBot.log")
+        self.log = logging.getLogger("w2vEngine")
+        self.log.setLevel('INFO')
+        formatter = logging.Formatter('%(asctime)-15s %(name)s '
+                                      '[%(levelname)s] %(message)s')
+        fh = logging.FileHandler(logname)
+        fh.setFormatter(formatter)
+        self.log.addHandler(fh)
+        self.modelpath = modelpath
+        # store = pd.HDFStore(modelpath)
+        # df = store.get('df')
+        with open(path.join(modelpath, "words.pkl"), "rb") as infile:
+            self.vocabulary = pickle.load(infile)
+        # self.vocabulary = df['word'].tolist()
+        self.log.info("Size of vocabulary: %d" % len(self.vocabulary))
+        # self.mat = np.row_stack(df['vector'].tolist())
+        with open(path.join(modelpath, "mat.pkl"), "rb") as infile:
+            self.mat = pickle.load(infile)
+
+    def get_synonyms(self, query_term, n):
+        i = self.vocabulary.index(query_term)
+        y = self.mat[i].reshape(1, -1)
+        sims = cosine_similarity(self.mat, y).flatten()
+        best_sims = sims.argsort()
+        best_sims = list(best_sims[-10:-1])
+        best_sims.reverse()
+        results = []
+        for i in best_sims:
+            candidate = self.vocabulary[i]
+            if not candidate.startswith(query_term):
+                if not query_term.startswith(candidate):
+                    results.append(self.vocabulary[i])
+        return results[:n]
+
+    def get_abstractions(self, query_terms, signs, n):
+        query_terms = [q.replace("-", "")
+                       for q in query_terms]
+        indices = [self.vocabulary.index(q)
+                   for q in query_terms]
+        vectors = self.mat[indices]
+        query_vectors = [signs[i]*vectors[i]
+                         for i in range(len(query_terms))]
+        query_vector = sum(query_vectors).reshape(1, -1)
+        sims = cosine_similarity(self.mat, query_vector).flatten()
+        best_sims = sims.argsort()
+        best_sims = list(best_sims[-10:-1])
+        best_sims.reverse()
+        candidates = [self.vocabulary[i]
+                      for i in best_sims]
+        results = []
+        for c in candidates:
+            if not any([c.startswith(q)
+                        for q in query_terms]):
+                results.append(c)
+        return results[:n]</code></pre>
+
+Here are some examples:
+<ul>
+  <li class="list-group-item">climate + change = climatic, hydrological, warming, impacts, weather</li>
+  <li class="list-group-item">time + space = dimension, dimensional, trajectory, elapsed, interpolated</li>
+  <li class="list-group-item">Related terms to altmetrics: publisher, neuroscientific, diplomatic, publishing, idealistic</li>
+  <li class="list-group-item">ocean - water = pacific, coast, archipelago, coastal, atlantic</li>
+  <li class="list-group-item">Related terms to cat: tgg, ggg, ggc, ttg, gac</li>
+</ul>
+And here is the bot in action: <a href="https://twitter.com/EmbedBot" target="_blank">Embedbot on Twitter</a>
+</div>
