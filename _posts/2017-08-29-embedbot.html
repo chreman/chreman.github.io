@@ -6,14 +6,20 @@ permalink: /:title.html
 
 <div class="text-justify">
 <h4>Related terms to cat: tgg, ggg, ggc, ttg, gac</h4>
-Apache Spark is often named as the successor framework of Hadoop for large-scale data analytics. It comes neatly packaged with dataframe-structure with SQL-functionalities, a machine learning API and various other useful additions.
+  <figure class="figure">
+    <img src="/img/projects/embedbot.png" class="img-responsive" alt="Embedbot">
+    <figcaption class="figure-caption"><i>A visualization of a part of the vector space of the word2vec-model behind the bot. cc-by Christopher Kittel</i></figcaption>
+  </figure>
+<br>
+<a href="http://spark.apache.org/" target="_blank">Apache Spark</a> is often named as the successor framework of Hadoop for large-scale data analytics.
+It comes neatly packaged with a dataframe structure with SQL-like functionalities, a machine learning API and various other useful additions.
 I played around with it for a while, and built a word2vec-Twitter bot with basic interactive functionalities. In this post I want to outline how.
 <br>
 <br>
 We need following ingredients:
 <ul>
-<li>The dataset - a large collection of texts, in our case the Open Access fulltexts from EuropePMC in XML-format</li>
-<li>The word2vec-model - computed on that dataset, in our case with the Word2Vec-implementation in Apache Spark-ML</li>
+<li>The dataset - a large collection of texts, in our case the <a href="http://europepmc.org/downloads/openaccess" target="_blank">Open Access fulltexts from EuropePMC</a> in XML-format</li>
+<li>The word2vec-model - computed on that dataset, in our case with the <a href="https://spark.apache.org/docs/latest/api/python/pyspark.ml.html#pyspark.ml.feature.Word2Vec" target="_blank">Word2Vec-implementation in Apache Spark-ML</a></li>
 <li>The Bot - taking user queries and answering them</li>
 </ul>
 
@@ -24,8 +30,8 @@ We work with following assumptions:
   <a href="http://alexanderwaldin.github.io/pyspark-quickstart-guide.html" target="_blank">Pyspark locally</a>
   or <a href="https://www.supergloo.com/fieldnotes/apache-spark-cluster-amazon-ec2-tutorial/" target="_blank">Spark on AWS</a>.</li>
 </ul>
-
-<h4>Step 1: Extract the full text and build a Word2Vec-model</h2>
+<br>
+<h4>Step 1: Extracting the full texts and building a Word2Vec-model</h2>
 
 Spark reads in JSON quite well, XML less so. We will use a small script to extract full text, abstract and metadata from the XML files.
 The <a href="https://github.com/chreman/embedbot/blob/master/workflow/xml2json.py" target="_blank">script</a> untars the files, parses the XML files, identifies individual articles, and extracts data and metadata according to our <a href="https://github.com/chreman/embedbot/blob/master/workflow/JATS.json" target="_blank">specifications</a>.
@@ -96,6 +102,8 @@ We do this to make it as simple as possible to read and access, if we want our b
 
 That's it for step 1. We now have a word2vec-model in small, compact form, built on millions of words from Open Access scientific literature.
 
+<br>
+<br>
 <h4>Step 2: Building a Twitter-bot that can react to queries/questions</h4>
 
 The bot mainly consists of two components, one for handling the interaction on Twitter, and one that translates the interaction into the word2vec-model and comes up with a hopefully reasonable answer.
