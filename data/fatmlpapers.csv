@@ -1,66 +1,139 @@
-"Title","Issues/Problem","Technologies/Solutions","Use Cases/Domains","DOI/URL"
-"Exploring or Exploiting? Social and Ethical Implications of Autonomous Experimentation in AI","Overview","Artificial Intelligence","large-scale experimentation",
-"Rawlsian Fairness for Machine Learning","Fairness","Linear Contextual Bandit","Online Decision Making","https://arxiv.org/pdf/1610.09559.pdf"
-"Iterative Orthogonal Feature Projection for Diagnosing Bias in Black-Box-Models","Fairness, Interpretability","Orthogonal Feature Projection","Assessing Biases","https://arxiv.org/pdf/1611.04967.pdf"
-"Algorithmic Transparency via Quantitative Input Influence: Theory and Experiments with Learning Systems","Transparency","Metrics, Quantitative Input Influence","Decision Support Systems","https://www.andrew.cmu.edu/user/danupam/datta-sen-zick-oakland16.pdf"
-"Better decision support through exploratory discrimination-aware data mining: Foundations and empirical evidence","Fairness, Discrimination Awareness","User Study","Decision Support Systems","https://doi.org/10.1007/s10506-013-9152-0"
-"Three naive Bayes approaches for discrimination-free classification","Fairness, Discrimination Awareness","Naive Bayes, Classification",,"https://doi.org/1010.1007/s10618-010-0190-x"
-"Building Classifiers with Independency Constraints","Protected Variables","Independency Constraints, Classification, Debiasing Data",,"http://wwwis.win.tue.nl/~tcalders/dadm/lib/exe/fetch.php?media=ieee_icdm_ws.pdf"
-"Wrong side of the tracks: Big Data and Protected Categories","Protected Variables, Interpretability","Information Theory","Decision Making","https://arxiv.org/pdf/1412.4643.pdf"
-"Certifying and removing disparate impact","Protected Variables, Discrimination Awareness, Interpretability","Metrics, Data Debiasing","Law","https://arxiv.org/pdf/1412.3756.pdf"
-"Transparent User Models for Personalization","Interpretability, Transparency","Bayesian generative model","Personalization","http://www.select.cs.cmu.edu/publications/paperdir/kdd2012-elarini-paquet-herbrich-vangael-aguerayarcas.pdf"
-"Comprehensible Classification Models – a position paper","Interpretability","Monotonicity Constraints, Decision Trees, Classification Rules, Decision Tables, Nearest Neighbors, Bayesian Networks",,"https://pdfs.semanticscholar.org/35db/1c68ac5ac1156ef3df48e5fe7d7ded2689df.pdf"
-"Fairness Through Awareness","Fairness, Privacy, Affirmative Action","Metrics, Constraints, Classification",,"https://arxiv.org/pdf/1104.3913.pdf"
-"Explaining Collaborative Filtering Recommendations","Interpretability,Transparency","User Study, Collaborative Filtering","Recommender Systems","http://recsys.cs.umn.edu/docs/explain-CSCW-2000.pdf"
-"Adversarial Learning","Adversarial Learning, Classification","Spam Filtering",,"https://pdfs.semanticscholar.org/6f00/6a3895dd8fb24f83235a67f2fe72418aa800.pdf"
-"Integrating Induction and Deduction for Finding Evidence of Discrimination","Discrimination Awareness","Classification","Decision Support Systems","http://pages.di.unipi.it/ruggieri/Papers/lp2dd.pdf"
-"The security of machine learning","Security","Adversarial Learning","Spam Filtering","https://doi.org/1010.1007/s10994-010-5188-5"
-"Discrimination aware decision tree learning","Discrimination Awareness","Constraints, Classification, Decision Trees",,"https://pure.tue.nl/ws/files/3216677/692173.pdf"
-"DCUBE: Discrimination Discovery in Databases","Discrimination Awareness","Classification, Rule based",,"http://pages.di.unipi.it/ruggieri/Papers/dcube.pdf"
-"A Study of Privacy and Fairness in Sensitive Data Analysis","Privacy, Fairness","Classification, Metrics",,"https://arxiv.org/pdf/1104.3913.pdf"
-"Fairness-aware Learning through Regularization Approach","Fairness, Discrimination Awareness","Classification, Logistic Regression, Information Theory",,"http://dataspace.princeton.edu/jspui/bitstream/88435/dsp01vq27zn422/1/Hardt_princeton_0181D_10071.pdf"
-"Performance of classification models from a user perspective","Interpretability","Classification, Domain Constraints, Metrics","Credit Scoring",
-"Implementing Anti-Discrimination Policies in Statistical Profiling Models","Discrimination Awareness, Protected Variables",,,"https://pdfs.semanticscholar.org/57a1/cb2a8ce2c967f25d6a00d0fe5bb3c4aa1144.pdf"
-"Data preprocessing techniques for classification without discrimination","Discrimination Awareness, Protected Variables","Classification",,"http://download.springer.com/static/pdf/530/art%253A10.1007%252Fs10115-011-0463-8.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10115-011-0463-8&token2=exp=1489699117~acl=%2Fstatic%2Fpdf%2F530%2Fart%25253A10.1007%25252Fs10115-011-0463-8.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs10115-011-0463-8*~hmac=086561c1d0a4f9c71ae5dacd096f93f85cbea73e2fe30b975c1fd844272a21d5"
-"Considerations on Fairness-aware Data Mining","Overview, Fairness, Privacy, Protected Variables",,,"https://pdfs.semanticscholar.org/b83b/f311efb9acd59945b5d2a7b7e070efc9013c.pdf"
-"Simultaneous Discrimination Prevention and Privacy Protection in Data Publishing and Mining","Discrimination Awareness, Privacy","Rule Protection, Frequent Pattern Mining","Decision Support Systems","https://arxiv.org/pdf/1306.6805.pdf"
-"A multidisciplinary survey on discrimination analysis","Overview, Discrimination Awareness","Observational, quasi-experimental, experimental","Labor economics, Social Profiling, Consumer Markets","http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.407.794&rep=rep1&type=pdf"
-"Learning Fair Representations","Fairness","Classification, Metrics",,"http://jmlr.org/proceedings/papers/v28/zemel13.pdf"
-"Fair Pattern Discovery","Fairness, Discrimination Awareness","Pattern Sanitization, Constraints, Frequent Pattern Mining",,"http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.934.8202&rep=rep1&type=pdf"
-"Injecting Discrimination and Privacy Awareness Into Pattern Discovery","Fairness, Discrimination Awareness","Pattern Sanitization, Constraints, Frequent Pattern Mining",,"http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.954.4871&rep=rep1&type=pdf"
-"Introduction to special issue on computational methods for enforcing privacy and fairness in the knowledge society","Fairness, Privacy",,,
-"Handling Conditional Discrimination","Fairness","Local Techniques, Classification",,"https://pdfs.semanticscholar.org/2363/72f030b021139530075829ca74574e7345ad.pdf"
-"Data Anonymity Meets Non-Discrimination","Privacy, Fairness","T-Closeness, alpha-protection, Mondrian",,"http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.437.6561&rep=rep1&type=pdf"
-"Auditing Algorithms: Research Methods for Detecting Discrimination on Internet Platforms","Transparency, Accountability","Audit Design",,"http://www-personal.umich.edu/~csandvig/research/Auditing%20Algorithms%20--%20Sandvig%20--%20ICA%202014%20Data%20and%20Discrimination%20Preconference.pdf"
-"Explaining Data-Driven Document Classifications","Transparency, Interpretability","Classification","News","https://archive.nyu.edu/jspui/bitstream/2451/31831/2/Provost%202_13.02.pdf"
-"Classifying Socially Sensitive Data Without Discrimination: An Analysis of a Crime Suspect Dataset","Fairness, Discrimination Awareness","Classification","Crime","http://www.cs.ru.nl/~sicco/papers/dpadm12.pdf"
-"A Study on the Impact of Data Anonymization on Anti-discrimination","Discrimination Awareness, Privacy","Classification, Suppression, Anonymization",,"http://crises2-deim.urv.cat/docs/publications/conferences/752.pdf"
-"Generalization-based Privacy Preservation and Discrimination Prevention in Data Publishing and Mining","Discrimination Awareness, Privacy","Debiasing Data, Classification, Metrics",,"http://crises2-deim.urv.cat/docs/publications/journals/813.pdf"
-"Fairness in Reinforcement Learning","Fairness","Reinforcement Learning, Constraints",,"https://arxiv.org/pdf/1611.03071.pdf"
-"Anti-discrimination Analysis Using Privacy Attack Strategies","Privacy, Discrimination Awareness","Frechet bounds, Attribute inference, minimality attacks, Auditing",,"https://doi.org/1010.1007/978-3-662-44851-9_44"
-"“Why Should I Trust You?” Explaining the Predictions of Any Classifier","Interpretability, Trust","Local Interpretable Model-Agnostic Explanations, Classification",,"https://arxiv.org/pdf/1602.04938.pdf"
-"Inherent Trade-Offs in the Fair Determination of Risk Scores","Fairness","Classifications","Risk Scoring","https://arxiv.org/pdf/1609.05807.pdf"
-"The Case for Temporal Transparency: Detecting Policy Change Events in Black-Box Decision Making Systems","Transparency, Time","Audit Design","Decision Support Systems","https://arxiv.org/pdf/1610.10064.pdf"
-"How to be Fair and Diverse?","Fairness, Discrimination Awareness, Diversity, Overview","Debiasing Data, Classification, Metrics",,"https://arxiv.org/pdf/1610.07183.pdf"
-"Semantics derived automatically from language corpora necessarily contain human biases","Fairness","Debiasing Data, Natural Language Processing, Semantics, Word Embedding",,"https://arxiv.org/pdf/1608.07187.pdf"
-"How the machine ‘thinks’: Understanding opacity in machine learning algorithms","Transparency, Opacity, Overview","Classification","Spam Filtering","https://doi.org/1010.1177/2053951715622512"
-"Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings","Fairness, Diversity, Discrimination Awareness","Word Embedding, Natural Language Processing",,"http://papers.nips.cc/paper/6228-man-is-to-computer-programmer-as-woman-is-to-homemaker-debiasing-word-embeddings.pdf"
-"European Union regulations on algorithmic decision-making and a right to explanation","Privacy, Overview, Regulations","Audit Design","Law","https://pdfs.semanticscholar.org/9323/57ec53756e3d1fa699e76a76f4178477f680.pdf"
-"What is data ethics?","Overview",,,"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5124072/pdf/rsta20160360.pdf"
-"Bias in Search Results? Diagnosis and Response","Fairness, Interpretability","Legal, Policy","Search Engines","http://www.ijlt.in/archive/volume7/2_Edelman.pdf"
-"XRay: Enhancing the Web’s Transparency with Differential Correlation","Transparency","Differencial Correlation","Search Engines, Recommender Systems","https://arxiv.org/pdf/1407.2323v2.pdf"
-"Algorithmic Accountability Reporting: On the Investigation of Black Boxes","Overview, Accountability, Interpretability, Transparency","Audit Design",,"http://towcenter.org/wp-content/uploads/2014/02/78524_Tow-Center-Report-WEB-1.pdf"
-"Measuring meaning, capturing personality? Auditing language-assessing algorithms","Privacy, Interpretability","Audit Design","Natural Language Processing","https://auditingalgorithms.files.wordpress.com/2015/05/abstract_algoaudits_icwsm2015_puschmann.pdf"
-"Digital Discrimination: The Case of Airbnb.com","Discrimination Awareness","Audit Design","Online Marketplace","http://www.benedelman.org/publications/airbnb-011014.pdf"
-"Explaining Differences between Groups: Oaxaca Decomposition",,"Oaxaca Decomposition","Health Sector","http://siteresources.worldbank.org/INTPAH/Resources/Publications/459843-1195594469249/HealthEquityCh12.pdf"
-"Should algorithms do what people want or what is good for them? Exploring ethical dilemmas in online health and privacy","Interpretability, Privacy","Ethics, Dilemma","Health Sector","https://auditingalgorithms.files.wordpress.com/2015/05/whittaker_oxford_workshop.pdf"
-"The News Feed Algorithm and the Spread of Political Information through Social Networks",,,"Social Networks","https://auditingalgorithms.files.wordpress.com/2015/05/feed-algorithms-and-political-information.pdf"
-"A Path to Understanding the Effects of Algorithm Awareness","Privacy, Transparency, Awareness","Audit Design","News, Social Media","http://social.cs.uiuc.edu/papers/pdfs/paper188.pdf"
-"I always assumed that I wasn’t really that close to [her]:reasoning about invisible algorithms in the news feed","Awareness, Interpretability",,"News, Recommender Systems, Social Networks","http://www-personal.umich.edu/~csandvig/research/Eslami_Algorithms_CHI15.pdf"
-"Measuring Price Discrimination and Steering on E-commerce Web Sites","Discrimination Awareness, Accountability","Audit Design, Metrics","e-commerce","http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.681.3132&rep=rep1&type=pdf"
-"Art Thou Target or Art Thou Waste? A Collective Audit of Online Advertising Placements","Accountability","Audit Design","e-commerce, Advertising","https://auditingalgorithms.files.wordpress.com/2015/05/stevenson_artthoutargetorwaste.pdf"
-"Auditing The Echonest – Investigations to gauge output accuracy","Accountability","Audit Design","Recommender Systems","https://auditingalgorithms.files.wordpress.com/2015/05/icwsm_auditingalgorworkshop_submission_gagen.pdf"
-"Problem Statement to Algorithm Audits half-day workshop","Transparency, Accountability","Audit Design","Social Networks","https://auditingalgorithms.files.wordpress.com/2015/05/araujo-willian-f-proposal-to-auditing-algorithms.pdf"
-"Governance of algorithms: options and limitations","Overview, Governance, Transparency, Accountability","Audit Design",,"http://dx.doi.org/10.1108/info-05-2015-0035"
-"Auditing for Transparency in Content Personalization Systems","Overview, Transparency, Interpretability","Audit Design","Recommender Systems","http://ijoc.org/index.php/ijoc/article/download/6267/1808"
-"When the Algorithm Itself Is a Racist: Diagnosing Ethical Harm in the Basic Components of Software","Overview, Ethics","Ethics","Computer Vision","http://ijoc.org/index.php/ijoc/article/viewFile/6182/1807"
+Title,Issues/Problem,Technologies/Solutions,Use Cases/Domains,DOI/URL
+A Few Useful Things to Know About Machine Learning,Overview,,,http://doi.acm.org/10.1145/2347736.2347755
+A Mild Defense of Our New Machine Overlords,Interpretability,,Fourth Amendment,https://papers.ssrn.com/abstract=2941078
+A multidisciplinary survey on discrimination analysis,"Overview, Discrimination Awareness","Observational, quasi-experimental, experimental","Labor economics, Social Profiling, Consumer Markets",http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.407.794&rep=rep1&type=pdf
+A Path to Understanding the Effects of Algorithm Awareness,"Privacy, Transparency, Awareness",Audit Design,"News, Social Media",http://social.cs.uiuc.edu/papers/pdfs/paper188.pdf
+A statistical framework for fair predictive algorithms,Fairness,Statistical Framework,Criminal Justice,http://arxiv.org/abs/1610.08077
+A Study of Privacy and Fairness in Sensitive Data Analysis,"Privacy, Fairness","Classification, Metrics",,https://arxiv.org/pdf/1104.3913.pdf
+A Study on the Impact of Data Anonymization on Anti-discrimination,"Discrimination Awareness, Privacy","Classification, Suppression, Anonymization",,http://crises2-deim.urv.cat/docs/publications/conferences/752.pdf
+Accountability in Algorithmic Decision Making,"Overview, Accountability",Error Analysis,Automated Journalism,http://doi.acm.org/10.1145/2844110
+Adversarial Learning,"Adversarial Learning, Classification",Spam Filtering,,https://pdfs.semanticscholar.org/6f00/6a3895dd8fb24f83235a67f2fe72418aa800.pdf
+Algorithmic Accountability Reporting: On the Investigation of Black Boxes,"Overview, Accountability, Interpretability, Transparency",Audit Design,,http://towcenter.org/wp-content/uploads/2014/02/78524_Tow-Center-Report-WEB-1.pdf
+Algorithmic Transparency via Quantitative Input Influence,"Transparency, Interpretability",Quantitative Input Influence,,https://link.springer.com/chapter/10.1007/978-3-319-54024-5_4
+Algorithmic Transparency via Quantitative Input Influence: Theory and Experiments with Learning Systems,Transparency,"Metrics, Quantitative Input Influence",Decision Support Systems,https://www.andrew.cmu.edu/user/danupam/datta-sen-zick-oakland16.pdf
+Anti-discrimination Analysis Using Privacy Attack Strategies,"Privacy, Discrimination Awareness","Frechet bounds, Attribute inference, minimality attacks, Auditing",,https://doi.org/1010.1007/978-3-662-44851-9_44
+Applications of inspection games,Economics,Audit Design,,http://www.tandfonline.com/doi/abs/10.1080/13926292.2004.9637251
+Art Thou Target or Art Thou Waste? A Collective Audit of Online Advertising Placements,Accountability,Audit Design,"e-commerce, Advertising",https://auditingalgorithms.files.wordpress.com/2015/05/stevenson_artthoutargetorwaste.pdf
+Auditing Algorithms: Research Methods for Detecting Discrimination on Internet Platforms,"Transparency, Accountability",Audit Design,,http://www-personal.umich.edu/~csandvig/research/Auditing%20Algorithms%20--%20Sandvig%20--%20ICA%202014%20Data%20and%20Discrimination%20Preconference.pdf
+Auditing for Transparency in Content Personalization Systems,"Overview, Transparency, Interpretability",Audit Design,Recommender Systems,http://ijoc.org/index.php/ijoc/article/download/6267/1808
+Auditing The Echonest � Investigations to gauge output accuracy,Accountability,Audit Design,Recommender Systems,https://auditingalgorithms.files.wordpress.com/2015/05/icwsm_auditingalgorworkshop_submission_gagen.pdf
+"Automated Experiments on Ad Privacy Settings: A Tale of Opacity, Choice, and Discrimination","Transparency, Privacy",Audit Design,Advertising,http://arxiv.org/abs/1408.6491
+"Automation, Algorithms, and Politics| Automation, Big Data and Politics: A Research Review","Economics, Overview",Audit Design,Public Sector,http://ijoc.org/index.php/ijoc/article/view/6233
+Avoiding Discrimination through Causal Reasoning,Discrimination Awareness,Causal Reasoning,,http://arxiv.org/abs/1706.02744
+Better decision support through exploratory discrimination-aware data mining: Foundations and empirical evidence,"Fairness, Discrimination Awareness",User Study,Decision Support Systems,https://doi.org/10.1007/s10506-013-9152-0
+Bias in Computer Systems,"Bias Awareness, Overview",,,http://doi.acm.org/10.1145/230538.230561
+Bias in Search Results? Diagnosis and Response,"Fairness, Interpretability","Legal, Policy",Search Engines,http://www.ijlt.in/archive/volume7/2_Edelman.pdf
+Big Data and Due Process: Toward a Framework to Redress Predictive Privacy Harms,"Overview, Privacy",Evaluation Framework,Big Data,http://lawdigitalcommons.bc.edu/bclr/vol55/iss1/4
+Big Data and Its Exclusions,Overview,,,https://papers.ssrn.com/abstract=2293765
+Building Classifiers with Independency Constraints,Protected Variables,"Independency Constraints, Classification, Debiasing Data",,http://wwwis.win.tue.nl/~tcalders/dadm/lib/exe/fetch.php?media=ieee_icdm_ws.pdf
+Causal Falling Rule Lists,Discrimination,"Hierarchical Bayesian Regression, Causal Falling Rule List",,http://arxiv.org/abs/1510.05189
+Certifying and removing disparate impact,"Protected Variables, Discrimination Awareness, Interpretability","Metrics, Data Debiasing",Law,https://arxiv.org/pdf/1412.3756.pdf
+Classifier Technology and the Illusion of Progress,Overview,Classification,,http://arxiv.org/abs/math/0606441
+Classifying Socially Sensitive Data Without Discrimination: An Analysis of a Crime Suspect Dataset,"Fairness, Discrimination Awareness",Classification,Crime,http://www.cs.ru.nl/~sicco/papers/dpadm12.pdf
+Combatting Police Discrimination in the Age of Big Data,"Discrimination Awareness, Accountability",,Predictive Policing,https://papers.ssrn.com/abstract=2787101
+Comprehensible Classification Models � a position paper,Interpretability,"Monotonicity Constraints, Decision Trees, Classification Rules, Decision Tables, Nearest Neighbors, Bayesian Networks",,https://pdfs.semanticscholar.org/35db/1c68ac5ac1156ef3df48e5fe7d7ded2689df.pdf
+Considerations on Fairness-aware Data Mining,"Overview, Fairness, Privacy, Protected Variables",,,https://pdfs.semanticscholar.org/b83b/f311efb9acd59945b5d2a7b7e070efc9013c.pdf
+Counterfactual Fairness,Fairness,Counterfactual Framework,,http://arxiv.org/abs/1703.06856
+Data Anonymity Meets Non-Discrimination,"Privacy, Fairness","T-Closeness, alpha-protection, Mondrian",,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.437.6561&rep=rep1&type=pdf
+Data Decisions and Theoretical Implications when Adversarially Learning Fair Representations,Fairness,"Classification, Adversarial Learning",Recommender Systems,http://arxiv.org/abs/1707.00075
+Data Mining and Antitrust,"Overview, Economics",,,http://heinonline.org/HOL/Page?handle=hein.journals/hjlt22&id=519&div=&collection=
+Data preprocessing techniques for classification without discrimination,"Discrimination Awareness, Protected Variables",Classification,,http://download.springer.com/static/pdf/530/art%253A10.1007%252Fs10115-011-0463-8.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs10115-011-0463-8&token2=exp=1489699117~acl=%2Fstatic%2Fpdf%2F530%2Fart%25253A10.1007%25252Fs10115-011-0463-8.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs10115-011-0463-8*~hmac=086561c1d0a4f9c71ae5dacd096f93f85cbea73e2fe30b975c1fd844272a21d5
+DCUBE: Discrimination Discovery in Databases,Discrimination Awareness,"Classification, Rule based",,http://pages.di.unipi.it/ruggieri/Papers/dcube.pdf
+Deconstructing Statistical Questions,Statistics,,,http://www.jstor.org/stable/2983526
+Digital Discrimination: The Case of Airbnb.com,Discrimination Awareness,Audit Design,Online Marketplace,http://www.benedelman.org/publications/airbnb-011014.pdf
+Digital Market Manipulation,"Overview, Ethics, Economy",,Market Manipulation,https://papers.ssrn.com/abstract=2309703
+Discrimination aware decision tree learning,Discrimination Awareness,"Constraints, Classification, Decision Trees",,https://pure.tue.nl/ws/files/3216677/692173.pdf
+Discrimination in Online Ad Delivery,"Transparency, Privacy",Audit Design,Advertising,http://arxiv.org/abs/1301.6822
+Discriminatory Transfer,Fairness,Transfer Learning,,http://arxiv.org/abs/1707.00780
+"Engineering the public: Big data, surveillance and computational politics","Overview, Ethics",,Social Engineering,http://journals.uic.edu/ojs/index.php/fm/article/view/4901
+Enhancing Transparency and Control When Drawing Data-Driven Inferences About Individuals,"Transparency, Predictive Modeling","Cloaking, Inference",Social Networks,https://www.ncbi.nlm.nih.gov/pubmed/28933942
+Equality of Opportunity in Supervised Learning,Fairness,"Constraints, Classification",Credit Scoring,http://arxiv.org/abs/1610.02413
+European Union regulations on algorithmic decision-making and a right to explanation,"Privacy, Overview, Regulations",Audit Design,Law,https://pdfs.semanticscholar.org/9323/57ec53756e3d1fa699e76a76f4178477f680.pdf
+Explaining Collaborative Filtering Recommendations,"Interpretability,Transparency","User Study, Collaborative Filtering",Recommender Systems,http://recsys.cs.umn.edu/docs/explain-CSCW-2000.pdf
+Explaining Data-Driven Document Classifications,"Transparency, Interpretability",Classification,News,https://archive.nyu.edu/jspui/bitstream/2451/31831/2/Provost%202_13.02.pdf
+Explaining Differences between Groups: Oaxaca Decomposition,,Oaxaca Decomposition,Health Sector,http://siteresources.worldbank.org/INTPAH/Resources/Publications/459843-1195594469249/HealthEquityCh12.pdf
+Exploring or Exploiting? Social and Ethical Implications of Autonomous Experimentation in AI,Overview,Artificial Intelligence,large-scale experimentation,
+"Facilitating the ethical use of health data for the benefit of society: electronic health records, consent and the duty of easy rescue","Ethics, Overview, Privacy",Informed Consent,Health Sector,10.1098/rsta.2016.0130
+Fair Pattern Discovery,"Fairness, Discrimination Awareness","Pattern Sanitization, Constraints, Frequent Pattern Mining",,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.934.8202&rep=rep1&type=pdf
+Fair Personalization,Fairness,"Bias Control, Constraints",Personalization,http://arxiv.org/abs/1707.02260
+Fair Pipelines,Fairness,Compound Decisions,,http://arxiv.org/abs/1707.00391
+Fair prediction with disparate impact: A study of bias in recidivism prediction instruments,Fairness,Metrics ,Recidivism Prediction,http://arxiv.org/abs/1703.00056
+"Fairer and more accurate, but for whom?",Fairness,Model Comparison Framework,"Recidivism Prediction, Credit Scoring",http://arxiv.org/abs/1707.00046
+Fairness as a Program Property,Fairness,"Program Verification, Automated Verification, Probabilistic Population Model",,http://arxiv.org/abs/1610.06067
+Fairness at Equilibrium in the Labor Market,"Fairness, Economy, Distribution","Equilibrium Model, Asymmetric Equilibria",,http://arxiv.org/abs/1707.01590
+Fairness in Criminal Justice Risk Assessments: The State of the Art,Fairness,Evaluation Framework,Criminology,http://arxiv.org/abs/1703.09207
+Fairness in Reinforcement Learning,Fairness,"Reinforcement Learning, Constraints",,https://arxiv.org/pdf/1611.03071.pdf
+Fairness Through Awareness,"Fairness, Privacy, Affirmative Action","Metrics, Constraints, Classification",,https://arxiv.org/pdf/1104.3913.pdf
+Fairness-aware Learning through Regularization Approach,"Fairness, Discrimination Awareness","Classification, Logistic Regression, Information Theory",,http://dataspace.princeton.edu/jspui/bitstream/88435/dsp01vq27zn422/1/Hardt_princeton_0181D_10071.pdf
+From Parity to Preference-based Notions of Fairness in Classification,"Fairness, Distribution, Economy",Preference-based Fairness,,http://arxiv.org/abs/1707.00010
+Game Theory and Risk Analysis,Economics,,,http://agris.fao.org/agris-search/search.do?recordID=US201301655191
+Generalization-based Privacy Preservation and Discrimination Prevention in Data Publishing and Mining,"Discrimination Awareness, Privacy","Debiasing Data, Classification, Metrics",,http://crises2-deim.urv.cat/docs/publications/journals/813.pdf
+Governance by algorithms: reality construction by algorithmic selection on the Internet,"Transparency, Accountability, Overview",,"Manipulation, Social Engineering",https://doi.org/10.1177/0163443716643157
+Governance of algorithms: options and limitations,"Overview, Governance, Transparency, Accountability",Audit Design,,http://dx.doi.org/10.1108/info-05-2015-0035
+"Governing Algorithms: Myth, Mess, and Methods","Overview, Transparency, Agency",,,https://doi.org/10.1177/0162243915608948
+Handling Conditional Discrimination,Fairness,"Local Techniques, Classification",,https://pdfs.semanticscholar.org/2363/72f030b021139530075829ca74574e7345ad.pdf
+How big data is unfair,Overview,,,https://medium.com/@mrtz/how-big-data-is-unfair-9aa544d739de
+How the machine �thinks�: Understanding opacity in machine learning algorithms,"Transparency, Opacity, Overview",Classification,Spam Filtering,http://journals.sagepub.com/pb-assets/Icons/pdf-icon-large.png
+How to be Fair and Diverse?,"Fairness, Discrimination Awareness, Diversity, Overview","Debiasing Data, Classification, Metrics",,https://arxiv.org/pdf/1610.07183.pdf
+I always assumed that I wasn�t really that close to [her]:reasoning about invisible algorithms in the news feed,"Awareness, Interpretability",,"News, Recommender Systems, Social Networks",http://www-personal.umich.edu/~csandvig/research/Eslami_Algorithms_CHI15.pdf
+Ideas on interpreting machine learning,"Overview, Interpretability",Metrics ,,https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning
+Identifying Significant Predictive Bias in Classifiers,Bias Awareness,"Classification, Bootstrap subsetting",Recidivism Prediction,http://arxiv.org/abs/1611.08292
+Implementing Anti-Discrimination Policies in Statistical Profiling Models,"Discrimination Awareness, Protected Variables",,,https://pdfs.semanticscholar.org/57a1/cb2a8ce2c967f25d6a00d0fe5bb3c4aa1144.pdf
+Incomprehensible Discrimination,"Transparency, Interpretability, Accountability","Burden of Proof, Law",Regulations,https://papers.ssrn.com/abstract=2950018
+Inherent Trade-Offs in the Fair Determination of Risk Scores,Fairness,"Classifications, Constraints, Evaluation Framework",Risk Scoring,https://arxiv.org/pdf/1609.05807.pdf
+Injecting Discrimination and Privacy Awareness Into Pattern Discovery,"Fairness, Discrimination Awareness","Pattern Sanitization, Constraints, Frequent Pattern Mining",,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.954.4871&rep=rep1&type=pdf
+Integrating Induction and Deduction for Finding Evidence of Discrimination,"Accountability, Transparency","Classification, Rule-Based Discrimination Discovery, LP2DD","Decision Support Systems, Credit Scoring",http://pages.di.unipi.it/ruggieri/Papers/lp2dd.pdf
+Interpretability via Model Extraction,Interpretability,"Model Extraction, Randorm Forests, Neural Nets, Reinforcement Learning",,http://arxiv.org/abs/1706.09773
+Interpretable & Explorable Approximations of Black Box Models,Interpretability,"Transparent Approximations, Model Agnostic Framework, Global Explanations",,http://arxiv.org/abs/1707.01154
+Interpretable Classification Models for Recidivism Prediction,Interpretability,"Metrics, Supersparse Linear Integer Models",Recidivism Prediction,http://arxiv.org/abs/1503.07810
+Introduction to special issue on computational methods for enforcing privacy and fairness in the knowledge society,"Fairness, Privacy",,,
+Is Artificial Intelligence Permanently Inscrutable?,"Overview, Interpretability",,,http://nautil.us/issue/40/learning/is-artificial-intelligence-permanently-inscrutable
+Is it ethical to avoid error analysis?,"Fairness, Ethics, Bias Awareness",Error Analysis,,http://arxiv.org/abs/1706.10237
+Iterative Orthogonal Feature Projection for Diagnosing Bias in Black-Box-Models,"Fairness, Interpretability",Orthogonal Feature Projection,Assessing Biases,https://arxiv.org/pdf/1611.04967.pdf
+Learning Fair Classifiers: A Regularization-Inspired Approach,Fairness,"Classification, Regularization",Recidivism Prediction,http://arxiv.org/abs/1707.00044
+Learning Fair Representations,Fairness,"Classification, Metrics",,http://jmlr.org/proceedings/papers/v28/zemel13.pdf
+Locating ethics in data science: responsibility and accountability in global and distributed knowledge production systems,"Ethics, Overview",Data Management,Regulations,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5124067/
+Logics and practices of transparency and opacity in real-world applications of public sector machine learning,"Transparency, Accountability, Overview",Interviews,Public Sector,http://arxiv.org/abs/1706.09249
+Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings,"Fairness, Diversity, Discrimination Awareness","Word Embedding, Natural Language Processing",,http://papers.nips.cc/paper/6228-man-is-to-computer-programmer-as-woman-is-to-homemaker-debiasing-word-embeddings.pdf
+"Measuring meaning, capturing personality? Auditing language-assessing algorithms","Privacy, Interpretability",Audit Design,Natural Language Processing,https://auditingalgorithms.files.wordpress.com/2015/05/abstract_algoaudits_icwsm2015_puschmann.pdf
+Measuring Price Discrimination and Steering on E-commerce Web Sites,"Discrimination Awareness, Accountability","Audit Design, Metrics",e-commerce,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.681.3132&rep=rep1&type=pdf
+Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints,Discrimination Awareness,"Constraints, Natural Language Processing",Gender Bias,http://arxiv.org/abs/1707.09457
+Multisided Fairness for Recommendation,Fairness,Taxonomy,Recommender Systems,http://arxiv.org/abs/1707.00093
+New Fairness Metrics for Recommendation that Embrace Differences,Fairness,"Metrics, Collaborative Filtering",Recommender Systems,http://arxiv.org/abs/1706.09838
+"On Fairness, Diversity and Randomness in Algorithmic Decision Making",Fairness,"Classification, Ensembles",,http://arxiv.org/abs/1706.10208
+On the (im)possibility of fairness,"Fairness, Overview",Evaluation Framework,,http://arxiv.org/abs/1609.07236
+Performance of classification models from a user perspective,Interpretability,"Classification, Domain Constraints, Metrics",Credit Scoring,
+Problem Statement to Algorithm Audits half-day workshop,"Transparency, Accountability",Audit Design,Social Networks,https://auditingalgorithms.files.wordpress.com/2015/05/araujo-willian-f-proposal-to-auditing-algorithms.pdf
+Rawlsian Fairness for Machine Learning,"Fairness, Distribution",Linear Contextual Bandit,Online Decision Making,https://arxiv.org/pdf/1610.09559.pdf
+Risk and Regulatory Policy,"Overview, Risk",,"Regulations, Public Sector",http://www.oecd-ilibrary.org/content/book/9789264082939-en
+Seeing without knowing: Limitations of the transparency ideal and its application to algorithmic accountability,"Transparency, Overview",Epistemic Framework,,https://doi.org/10.1177/1461444816676645
+Semantics derived automatically from language corpora contain human-like biases,Bias Awareness,"Natural Language Processing, Word Embedding Association Test",,http://arxiv.org/abs/1608.07187
+Semantics derived automatically from language corpora necessarily contain human biases,Fairness,"Debiasing Data, Natural Language Processing, Semantics, Word Embedding",,https://arxiv.org/pdf/1608.07187.pdf
+Should algorithms do what people want or what is good for them? Exploring ethical dilemmas in online health and privacy,"Interpretability, Privacy, Ethics","Ethics, Dilemma",Health Sector,https://auditingalgorithms.files.wordpress.com/2015/05/whittaker_oxford_workshop.pdf
+Simultaneous Discrimination Prevention and Privacy Protection in Data Publishing and Mining,"Discrimination Awareness, Privacy","Rule Protection, Frequent Pattern Mining",Decision Support Systems,https://arxiv.org/pdf/1306.6805.pdf
+Slave to the Algorithm? Why a 'Right to an Explanation' Is Probably Not the Remedy You Are Looking For,"Transparency, Interpretability",Subject-Centric Explanations,GDPR,https://papers.ssrn.com/abstract=2972855
+"Social Data: Biases, Methodological Pitfalls, and Ethical Boundaries",Bias Awareness,Evaluation Framework,,https://papers.ssrn.com/abstract=2886526
+Strategic Considerations in Auditing,Economics,"Audit Design, Decision Theory",Regulations,http://www.jstor.org/stable/247459
+Taming the Golem: Challenges of Ethical Algorithmic Decision Making,"Accountability, Bias Awareness","Evaluation Framework, Case Studies","Regulations, Manipulation",https://papers.ssrn.com/abstract=2981466
+"The Authority of ""Fair"" in Machine Learning","Fairness, Overview",,,http://arxiv.org/abs/1706.09976
+The Case for Temporal Transparency: Detecting Policy Change Events in Black-Box Decision Making Systems,"Transparency, Accountability","Audit Design, Time Series Changepoint Detection","Decision Support Systems, Predictive Policing",https://arxiv.org/pdf/1610.10064.pdf
+The Computer Says No!” : A Case Study on Automated Decision-making in Public Authorities,Overview,,Public Sector,http://urn.kb.se/resolve?urn=urn:nbn:se:oru:diva-48440
+The economics of algorithmic selection on the Internet,"Economics, Overview","Typology, Taxonomy","Business Models, Regulation",https://ideas.repec.org/h/elg/eechap/14700_19.html
+The ethics of algorithms: Mapping the debate,"Ethics, Overview",,,https://doi.org/10.1177/2053951716679679
+The Mythos of Model Interpretability,"Interpretability, Overview",Evaluation Framework,,http://arxiv.org/abs/1606.03490
+The News Feed Algorithm and the Spread of Political Information through Social Networks,,,Social Networks,https://auditingalgorithms.files.wordpress.com/2015/05/feed-algorithms-and-political-information.pdf
+The Organization of Economic Activity: Issues Pertinent to the Choice of Market versus Non-Market Allocation,Economics,,,
+The Role of Transparency in Recommender Systems,Transparency,User Study,Recommender Systems,http://doi.acm.org/10.1145/506443.506619
+The Scored Society: Due Process for Automated Predictions,Accountability,Due Process,Regulations,https://papers.ssrn.com/abstract=2376209
+The security of machine learning,Security,Adversarial Learning,Spam Filtering,https://doi.org/1010.1007/s10994-010-5188-5
+"The Sociology of Discrimination: Racial Discrimination in Employment, Housing, Credit, and Consumer Markets","Discrimination Awareness, Overview",,"Housing, Credit Scoring, Employment, Commerce",
+Three naive Bayes approaches for discrimination-free classification,"Fairness, Discrimination Awareness","Naive Bayes, Classification",,https://doi.org/1010.1007/s10618-010-0190-x
+Towards A Rigorous Science of Interpretable Machine Learning,"Interpretability, Overview",Taxonomy,,http://arxiv.org/abs/1702.08608
+Transparent User Models for Personalization,"Interpretability, Transparency",Bayesian generative model,Personalization,http://www.select.cs.cmu.edu/publications/paperdir/kdd2012-elarini-paquet-herbrich-vangael-aguerayarcas.pdf
+What is Computer Ethics?,"Overview, Ethics",,,http://www.jstor.org/stable/24436819
+What is data ethics?,"Overview, Ethics",,,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5124072/pdf/rsta20160360.pdf
+When the Algorithm Itself Is a Racist: Diagnosing Ethical Harm in the Basic Components of Software,"Overview, Ethics",Ethics,Computer Vision,http://ijoc.org/index.php/ijoc/article/viewFile/6182/1807
+Why a Right to Explanation of Automated Decision-Making Does Not Exist in the General Data Protection Regulation,"Interpretability, Accountability, Transparency",,GDPR,https://papers.ssrn.com/abstract=2903469
+Wrong side of the tracks: Big Data and Protected Categories,"Protected Variables, Interpretability",Information Theory,Decision Making,https://arxiv.org/pdf/1412.4643.pdf
+XRay: Enhancing the Web�s Transparency with Differential Correlation,Transparency,Differencial Correlation,"Search Engines, Recommender Systems",https://arxiv.org/pdf/1407.2323v2.pdf
+�Why Should I Trust You?� Explaining the Predictions of Any Classifier,"Interpretability, Accountability","Local Interpretable Model-Agnostic Explanations, Classification",,https://arxiv.org/pdf/1602.04938.pdf
