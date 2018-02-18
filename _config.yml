@@ -3,8 +3,8 @@
 title: Open Data Science
 author: Christopher Kittel
 url: https://christopherkittel.eu
-description: "I specialize in developing Text and Data Analytics Pipelines for Science and Civil Society."
-skills: "Text and Data Analytics Workflows for Science and Civil Society"
+description: "I specialize in prototyping and scaling up data-scientific pipelines, applying machine learning algorithms at scale, and visualizing results with the goal to improve organizational decision making capabilities."
+skills: "Text and Data Analytical Workflows for Data-Driven Businesses and Civil Society"
 meta_author: Kittel Christopher
 # If you use disqus you need disqus shortname
 # https://help.disqus.com/customer/portal/articles/466208
@@ -37,6 +37,8 @@ social:
   #   url: http://bitbucket.org/jekyll
   - title: github
     url: https://github.com/chreman
+  - title: linkedin
+    url: https://www.linkedin.com/in/christopher-kittel
 academic:
     - title: orcid
       url: https://orcid.org/0000-0002-1894-5040
